@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vue Work</title>
+</head>
+
+<body>
+    <!-- CTRL+K then +C -->
+    <!-- 
+        make array of names in vue part and use for 
+        loop of vue to show html list.(with binded directive and string interpolation.) 
+    -->
+    <div id="roote">
+        <ul>
+            <li v-for="name in list">{{name}}</li>
+        </ul>
+        <ul>
+            <li v-for="name in list" v-text="name"></li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        var vueObject = new Vue({el:"#roote",data:{message:'general message',list:["one","two","three","four","five"]}});
+    </script>
+</body>
+</html>

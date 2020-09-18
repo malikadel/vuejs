@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vue Work</title>
+</head>
+
+<body>
+    <!-- CTRL+K then +C -->
+    <!-- 
+        Make array of names in vue part and use for 
+        loop of vue to show html list. Then make an input field and upon clicking a button populate the 
+        value of input field into the names array. 
+    -->
+    <div id="roote">
+        <ul>
+            <li v-for="name in names">{{name}}</li>
+        </ul>
+        <ul>
+            <li v-for="name in names" v-text="name"></li>
+        </ul>
+        <input type="text" v-model="newName"/>
+        <button @:click="namePopulator()">Input value and Click Me To populate ul lists.</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el:"#roote",
+            methods:{namePopulator(){this.names.push(this.newName); this.newName = '';}},
+            data:{names:["Adeel","Akram","Awan","Jawan"], newName:''}});
+    </script>
+</body>
+</html>
