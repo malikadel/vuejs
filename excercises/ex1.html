@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vue Work</title>
+</head>
+
+<body>
+    <!-- CTRL+K then +C -->
+    <!-- make input field and bind vue based value to it -->
+    <div id="roote">
+        <input type="text" v-model="message.core"/>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        var data = {message:{bind:"Hello World",core:"Crusk is up"}};
+        var vue = new Vue({el:'#roote',data:data});
+        console.log(vue);
+    </script>
+</body>
+</html>
